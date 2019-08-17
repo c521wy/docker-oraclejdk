@@ -3,7 +3,7 @@ FROM centos
 # 1. install glibc-common to support chiness character
 # 2. set timezone to Shanghai
 RUN \
-yum install glibc-common -y && \
+yum install glibc-common wget -y && \
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 
