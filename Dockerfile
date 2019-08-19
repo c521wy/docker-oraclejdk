@@ -8,9 +8,9 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 
 RUN \
-wget -O /jdk-8u221-linux-x64.tar.gz https://pub.caiweiqiang.cn/jdk/jdk-8u221-linux-x64.tar.gz && \
-tar -xf /jdk-8u221-linux-x64.tar.gz && \
-rm -rf /jdk-8u221-linux-x64.tar.gz
+wget -O /jdk-11.0.4_linux-x64_bin.tar.gz https://pub.caiweiqiang.cn/jdk/jdk-11.0.4_linux-x64_bin.tar.gz && \
+tar -xf /jdk-11.0.4_linux-x64_bin.tar.gz && \
+rm -rf /jdk-11.0.4_linux-x64_bin.tar.gz
 
-ENV JAVA_HOME=/jdk1.8.0_221
+ENV JAVA_HOME=/jdk-11.0.4
 ENV PATH=$JAVA_HOME/bin:$PATH
