@@ -1,4 +1,4 @@
-FROM centos
+FROM centos:7
 
 # 1. install glibc-common to support chiness character
 # 2. set timezone to Shanghai
