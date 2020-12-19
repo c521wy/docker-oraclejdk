@@ -8,7 +8,7 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 
 RUN \
-wget -O /jdk-8u221-linux-x64.tar.gz https://pub.caiweiqiang.cn/jdk/jdk-8u221-linux-x64.tar.gz && \
+wget -q -O /jdk-8u221-linux-x64.tar.gz https://pub.caiweiqiang.cn/jdk/jdk-8u221-linux-x64.tar.gz && \
 tar -xf /jdk-8u221-linux-x64.tar.gz && \
 rm -rf /jdk-8u221-linux-x64.tar.gz
 
