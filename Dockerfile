@@ -1,10 +1,5 @@
 FROM centos:7
 
-# tar.gz文件名
-ARG TAR_GZ_NAME
-# tar.gz解压后的目录名
-ARG TAR_GZ_DIR_NAME
-
 # 1. install glibc-common to support chiness character
 # 2. set timezone to Shanghai
 RUN \
@@ -12,6 +7,11 @@ yum install glibc-common wget -y && \
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ## 防止中文乱码
 ENV LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+
+# tar.gz文件名
+ARG TAR_GZ_NAME
+# tar.gz解压后的目录名
+ARG TAR_GZ_DIR_NAME
 
 RUN \
 if [[ "${TAR_GZ_NAME}" = "" ]] || [[ "${TAR_GZ_DIR_NAME}" = "" ]]; then \
